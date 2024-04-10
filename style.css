@@ -115,7 +115,7 @@ nav ul li a {
   animation: slideBottom 1s ease forwards;
 }
 
-span {
+h1 span {
   color: #ffa500;
 }
 
@@ -191,7 +191,48 @@ span {
   text-align: center;
   margin-bottom: 5rem;
 }
-
+.quest {
+  /* opacity: 0;
+  animation: slideLeft 3s ease forwards; */
+}
+.desciptions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.interest {
+  font-size: 1.5rem;
+  align-self: center;
+  margin-right: 1.8rem;
+  display: flex;
+  gap: 2rem;
+  align-items: end;
+}
+.quote-1 {
+  align-self: start;
+}
+.quote2 {
+  align-self: end;
+}
+.quote {
+  color: #f85;
+  font-size: 4.9rem;
+}
+.introduction {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  text-align: start;
+  margin: 5rem 10rem;
+  color: #555;
+  /* background-color: ; */
+}
+.name,
+.date,
+.place {
+  color: #f85;
+  opacity: 0;
+  animation: slideLeft 3s ease forwards;
+  /* background-color: ; */
+}
 .col header.title {
   font-size: 2rem;
   color: #ea5;
@@ -426,6 +467,30 @@ footer p {
   cursor: pointer;
 }
 
+.menu-button {
+  color: #f85;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 4rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  /* z-index: 0; */
+}
+
+/* 
+new button
+*/
+/* .menu-open {
+}
+.menu-close { 
+}*/
+
+.hidden {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .row {
     grid-template-columns: 1fr;
@@ -471,11 +536,46 @@ footer p {
   .about_header {
     margin-top: 10rem;
   }
+  .interest {
+    font-size: 1.6rem;
+  }
 }
 
 @media (max-width: 770px) {
   html {
-    font-size: 6%;
+    font-size: 60%;
+  }
+  .introduction {
+    margin-bottom: 1rem;
+    margin-top: 14rem;
+    margin-left: 0;
+    display: inline;
+    /* font-size: ; */
+  }
+  /* .introduction ul {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    /* justify-self: start; */
+  /* align-self: self-start;
+  }  */
+  .about_header {
+    margin-bottom: 0;
+  }
+  .desciption {
+    font-size: 10rem;
+  }
+  .desciptions {
+    /* margin-top: 0; */
+    /* grid-template-rows: 1fr 2fr; */
+    grid-template-columns: 1fr;
+    font-size: 10rem;
+  }
+  .interest {
+    justify-self: end;
+    /* display: flex; */
+    /* align-self; */
+    margin: 1rem 2rem;
   }
   .hero {
     margin-bottom: 2rem;
@@ -501,12 +601,15 @@ footer p {
 }
 
 @media (max-width: 768px) {
+  .menu-button {
+    display: block !important;
+  }
   html {
     font-size: 60%;
   }
   .menu-btn {
     color: #f85;
-    display: block;
+    display: none;
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
